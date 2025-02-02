@@ -1,3 +1,6 @@
+/* ======================================= */
+/* 1440px -> Telas grandes de desktop      */
+/* ======================================= */
 @media (max-width: 1440px) {
   .container__product__info {
     width: 40%;
@@ -15,7 +18,23 @@
     padding-top: 20px;
   }
 }
-@media (max-width: 1286px) {
+/* ======================================= */
+/* 1250px -> Ajustes para telas médias     */
+/* ======================================= */
+
+@media (max-width: 1250px) {
+  .container__product__img {
+    width: 45%;
+  }
+  .container__product__img__smaller {
+    gap: 10px;
+  }
+  .img__smaller1,
+  .img__smaller2,
+  .img__smaller3,
+  .img__smaller4 {
+    border-radius: 16px;
+  }
   .container__product__info__text__title {
     font-size: 42px;
   }
@@ -23,24 +42,9 @@
     font-size: 16px;
   }
 }
-@media (max-width: 1250px) {
-  .container__product__img {
-    min-width: 40%;
-  }
-  .container__product__img__smaller {
-    gap: 10px;
-  }
-  .img__smaller1,
-.img__smaller2,
-.img__smaller3,
-.img__smaller4{
-  border-radius: 16px;
-}
-.container__product__img {
-  min-width: 45%;
-}
-}
-
+/* ======================================= */
+/* 1024px -> Telas de laptop / desktop menor */
+/* ======================================= */
 @media (max-width: 1024px) {
   .nav__item {
     margin-left: 0;
@@ -63,9 +67,7 @@
   .mobile__menu {
     display: flex;
   }
-  /* .container__product__img {
-    min-width: 45%;
-  } */
+
   .nav__list {
     width: 30%; /* motificacao importatde para 35%   */
     height: calc(100vh - 82px);
@@ -123,6 +125,10 @@
     margin: 80px 20px;
   }
 }
+
+/* ======================================= */
+/* 850px -> Tablets / dispositivos médios  */
+/* ======================================= */
 @media (max-width: 850px) {
   .container__product {
     flex-direction: column;
@@ -141,40 +147,34 @@
     flex-direction: row;
     justify-content: center;
     padding: 10px; /* Ajuste o valor conforme necessário*/
+    overflow: auto;
   }
   .container__product__img__smaller {
-    flex-direction: column;
     display: none;
   }
-  .div__img__bigger{
-display:flex ;
+  .div__img__bigger {
+    display: flex;
     justify-content: center;
   }
   .div__img__bigger img {
     width: 90%;
-    height:30%;
+    height: 30%;
     /* border-radius: 0; */
   }
   .btn__setas__direita,
-.btn_setas__esquerda {
+  .btn_setas__esquerda {
     display: flex;
-}
-}
-@media (max-width: 575px) {
-  .container__product__img__smaller {
-    display: none;
   }
-  /* .div__img__bigger img {
-    border-radius: 0;
-  } */
-  .container__product {
+}
+/* ======================================= */
+/* 550px -> Telas pequenas (smartphones+)  */
+/* ======================================= */
+
+@media (max-width: 550px) {
+  .container__product,
+  .container__product__img {
     padding: 0;
   }
-  .container__product__img{
-    padding: 0;
-  }
-}
-@media (max-width: 500px) {
   .navbar__profile {
     width: 32px;
     height: 32px;
@@ -206,25 +206,24 @@ display:flex ;
   .container__product__info {
     padding: 20px;
   }
-  .div__img__bigger{
-    width: 100% ;
+
+  .img__main {
+    height: auto;
   }
+  .div__img__bigger {
+    width: 100%;
+  }
+
   .div__img__bigger img {
-    width: 100% ;
-    height:30%;
+    width: 100%;
     border-radius: 0;
+    object-fit: contain;
   }
 }
 @media (max-width: 400px) {
-  .div__img__bigger{
-    width: 100% ;
-  }
   .div__img__bigger img {
-    width: 100% ;
-    height:30%;
-    border-radius: 0;
+    max-height: 400px; /* se quiser um limite, por exemplo */
   }
-  
   .modal {
     min-height: 100px;
     display: flex;
@@ -237,8 +236,8 @@ display:flex ;
     height: 25px;
   }
   .btn__setas__direita,
-.btn_setas__esquerda{
-  width: 35px;
-  height: 35px;
-}
+  .btn_setas__esquerda {
+    width: 35px;
+    height: 35px;
+  }
 }

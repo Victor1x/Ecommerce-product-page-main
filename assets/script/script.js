@@ -1,7 +1,3 @@
-const container__product__img = document.querySelector(
-  ".container__product__img"
-);
-
 const btn__setas__direita = document.querySelector(".btn__setas__direita");
 const btn_setas__esquerda = document.querySelector(".btn_setas__esquerda");
 
@@ -12,7 +8,7 @@ const img__smaller4 = document.querySelector(".img__smaller4");
 const img__active = document.querySelectorAll(".img__active");
 
 let isFixed = false; // Variável para controlar se a imagem está fixada
-
+let index = 0;
 const caminho = [
   "assets/images/image-product-1.jpg",
   "assets/images/image-product-2.jpg",
@@ -23,20 +19,46 @@ const caminho = [
 img__active.forEach((img, index) => {
   // Evento de mouseover
   img.addEventListener("mouseover", () => {
-   
-      // Somente se a imagem não estiver fixada
-      img__main.classList.add("hidden"); // Inicia a transição
-      setTimeout(() => {
-        img__main.src = caminho[index]; // Muda para a imagem correspondente
-        img__main.classList.remove("hidden"); // Reexibe suavemente
-      }, 400); // Tempo da transição
-    
+    // Somente se a imagem não estiver fixada
+    img__main.classList.add("hidden"); // Inicia a transição
+    setTimeout(() => {
+      img__main.src = caminho[index]; // Muda para a imagem correspondente
+      img__main.classList.remove("hidden"); // Reexibe suavemente
+    }, 400); // Tempo da transição
   });
-})
+});
+btn_setas__esquerda.addEventListener("click", () => {
+  if (index < caminho.length - 1) {
+    btn__setas__direita.classList.remove("disabled");
 
+    index++; // Incrementa o index para mudar para a próxima imagem
+    img__main.classList.add("hidden"); // Inicia a transição
+    setTimeout(() => {
+      img__main.src = caminho[index]; // Muda para a imagem correspondente
+      img__main.classList.remove("hidden"); // Reexibe suavemente
+    }, 400); // Tempo da transição
+  }
+  else{
+    btn_setas__esquerda.classList.add("disabled");
+  }
+});
 
+btn__setas__direita.addEventListener("click", () => {
+  if (index > 0) {
+    btn_setas__esquerda.classList.remove("disabled");
 
+    index--; // Decrementa o index para mudar para a imagem anterior
 
+    img__main.classList.add("hidden"); // Inicia a transição
+    setTimeout(() => {
+      img__main.src = caminho[index]; // Muda para a imagem correspondente
+      img__main.classList.remove("hidden"); // Reexibe suavemente
+    }, 400); // Tempo da transição
+  }
+  else{
+    btn__setas__direita.classList.add("disabled");
+  }
+});
 
 //   // Evento de mouseout
 //   img.addEventListener("mouseout", () => {
@@ -59,7 +81,7 @@ img__active.forEach((img, index) => {
 //       img__main.classList.remove("hidden"); // Reexibe suavemente
 //     }, 400);
 //   });
- 
+
 // });
 
 // // Verificação de clique fora do contêiner

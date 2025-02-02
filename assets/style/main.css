@@ -3,7 +3,7 @@
   justify-content: center;
   padding: 40px 10px 0px 10px;
   width: 100%;
-  height: 100vh - 102px;
+  min-height: calc(100vh - 102px) ;
   gap: 150px;
 }
 
@@ -20,6 +20,9 @@
   cursor: pointer;
   position: relative;
 }
+.disabled{
+  opacity: 0.3;
+}
 .btn__setas__direita,
 .btn_setas__esquerda {
   width: 50px;
@@ -30,6 +33,7 @@
   background-color: white;
   border-radius: 100%;
   cursor: pointer;
+  z-index: 100;
 }
 .btn__setas__direita {
   position: absolute;
@@ -44,16 +48,6 @@
   width: 100%;
   height: 100%;
 }
-/* .btn_setas__esquerda {
-  position: absolute;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  align-self: center;
-  border: 2px solid red;
-  display: flex;
-  align-items: center;
-} */
 .div__img__bigger img {
   width: 100%;
   height: 100%;
@@ -62,54 +56,40 @@
   transition: opacity 0.5s ease-in-out;
 }
 .hidden {
-  opacity: 0; /* Ocultar suavemente */
+  opacity: 0; 
 }
 .container__product__img__smaller {
   width: 90%;
   height: 30%;
   display: flex;
-  justify-content: space-around;
-  ;
-  /* border: 2px solid red; */
+  justify-content: space-between;
 }
 .img__smaller1,
 .img__smaller2,
 .img__smaller3,
 .img__smaller4 {
-  width: 90px;
-  height: 90px;
-  border-radius: 20px;
-  cursor: pointer;
+  width: 20%;
+  height: 10%;
+}
+.img__smaller1 img,
+.img__smaller2 img,
+.img__smaller3 img,
+.img__smaller4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
   transition: all 0.5s ease-in-out;
   border: 4px solid transparent;
-  object-fit: contain;
+  border-radius: 20px;
+  cursor: pointer;
 }
-.img__smaller1 {
-  background: url(../images/image-product-1-thumbnail.jpg) no-repeat center /
-    cover;
-}
-.img__smaller2 {
-  background: url(../images/image-product-2-thumbnail.jpg) no-repeat center /
-    cover;
-}
-.img__smaller3 {
-  background: url(../images/image-product-3-thumbnail.jpg) no-repeat center /
-    cover;
-}
-.img__smaller4 {
-  background: url(../images/image-product-4-thumbnail.jpg) no-repeat center /
-    cover;
-}
-
-
-.img__smaller1:hover,
-.img__smaller2:hover,
-.img__smaller3:hover,
-.img__smaller4:hover {
+.img__smaller1 img:hover,
+.img__smaller2 img:hover,
+.img__smaller3 img:hover,
+.img__smaller4 img:hover {
   opacity: 0.5;
   border: 4px solid var(--orange);
 }
-
 
 .container__product__info {
   width: 35%;
@@ -212,7 +192,7 @@
   background: var(--orange);
   border: none;
   cursor: pointer;
-  transition: all 0.5s ease-in-out  ;
+  transition: all 0.5s ease-in-out;
 }
 .container__product__info__quantity__btn img {
   width: 25px;
