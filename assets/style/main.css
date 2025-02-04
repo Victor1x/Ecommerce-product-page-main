@@ -35,10 +35,15 @@
   cursor: pointer;
   z-index: 100;
   border: none;
+  object-fit: cover;
 }
-.btn__setas__direita :hover,
+
+.btn__setas__direita:hover,
 .btn_setas__esquerda:hover {
   background-color: aliceblue;
+}
+.img__seta:hover {
+  opacity: 0.8;
 }
 .btn__setas__direita {
   position: absolute;
@@ -48,8 +53,8 @@
   position: absolute;
   right: 10px;
 }
-.btn__setas__direita img,
-.btn_setas__esquerda img {
+
+.img__seta {
   width: 100%;
   height: 100%;
 }
