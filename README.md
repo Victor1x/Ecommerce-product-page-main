@@ -1,18 +1,18 @@
-#🛒 E-commerce Product Page
-##📜 Descrição
+# 🛒 E-commerce Product Page
+## 📜 Descrição
 
 O projeto E-commerce Product Page é uma página interativa de um produto de e-commerce, permitindo aos usuários visualizar imagens do produto, ajustar quantidades e adicionar itens ao carrinho de compras. Este projeto ajudou a aprimorar habilidades essenciais em HTML, CSS e JavaScript, incluindo manipulação do DOM, eventos, acessibilidade e design responsivo.
 O sistema oferece uma interface intuitiva e responsiva, tornando a experiência do usuário fluida tanto em dispositivos móveis quanto em desktops.
 
-##🌟 Funcionalidades
+## 🌟 Funcionalidades
 
-✔ Menu de navegação responsivo
-✔ Alteração dinâmica das imagens do produto
-✔ Controle de quantidade de produtos
-✔ Adição de produtos ao carrinho
-✔ Modal do carrinho interativo
-✔ Feedback visual para ações do usuário
-✔ Design responsivo para diferentes tamanhos de tela
+✔ Menu de navegação responsivo<br>
+✔ Alteração dinâmica das imagens do produto<br>
+✔ Controle de quantidade de produtos<br>
+✔ Adição de produtos ao carrinho<br>
+✔ Modal do carrinho interativo<br>
+✔ Feedback visual para ações do usuário<br>
+✔ Design responsivo para diferentes tamanhos de tela<br>
 
 ##💻 Tecnologias Utilizadas
 
@@ -27,15 +27,15 @@ O sistema oferece uma interface intuitiva e responsiva, tornando a experiência 
 Clone o repositório
 git clone https://github.com/seu-usuario/ecommerce-product-page.git
 
-##📂 Estrutura do Projeto
+## 📂 Estrutura do Projeto
 
-📁 ecommerce-product-page
-│── 📁 assets
-│   │── 📁 images        # Imagens do produto e ícones
-│   │── 📁 style         # Arquivos CSS para estilos e responsividade
-│   │── 📁 script        # Arquivos JavaScript para funcionalidades
-│── 📄 index.html        # Estrutura principal da página
-│── 📄 README.md         # Documentação do projeto
+📁 ecommerce-product-page<br>
+│── 📁 assets<br>
+│   │── 📁 images       &nbsp; ==> Imagens do produto e ícones<br>
+│   │── 📁 style        &nbsp; ==> Arquivos CSS para estilos e responsividade<br>
+│   │── 📁 script       &nbsp; ==> Arquivos JavaScript para funcionalidades<br>
+│── 📄 index.html       &nbsp; ==> Estrutura principal da página<br>
+│── 📄 README.md        &nbsp; ==> Documentação do projeto<br>
 
 ##3🛠 Principais Recursos Implementados
 
@@ -62,13 +62,18 @@ Possibilidade de fechar o modal ao clicar fora dele ou pressionar ESC.
 Adaptação do layout para diferentes tamanhos de tela.
 Implementação de media queries para ajuste automático do conteúdo.
 
-📸 Demonstração
+## 📸 Demonstração
 
-🖥️ Versão Desktop
+## 🖥️ Versão Desktop
+<div align="center">
 <img src="assets/images/1-Macbook-Air-127.0.0.1.png" width="800px">
-📱 Versão Mobile
-<img src="assets/images/2-mobile-design.png" width="400px">
+</div>
 
-🏆 Créditos
-Desenvolvido por João Victor Almeida 
-Inspirado em um desafio do Frontend Mentor
+## 📱Versão Mobile
+<div align="center">
+<img src="assets/images/2-mobile-design.png" width="400px">
+</div>
+
+## 🏆 Créditos<br>
+Desenvolvido por João Victor Almeida. <br>
+Inspirado em um desafio do Frontend Mentor.
