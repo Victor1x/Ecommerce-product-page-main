@@ -36,7 +36,7 @@ git clone https://github.com/seu-usuario/ecommerce-product-page.git
 │── 📄 index.html       &nbsp; ==> Estrutura principal da página<br>
 │── 📄 README.md        &nbsp; ==> Documentação do projeto<br>
 
-## 3🛠 Principais Recursos Implementados
+## 🛠 Principais Recursos Implementados
 
 1️⃣ Menu Mobile
 Um menu responsivo que se abre e fecha com animação.
