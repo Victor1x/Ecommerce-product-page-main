@@ -11,10 +11,9 @@ O sistema oferece uma interface intuitiva e responsiva, tornando a experiência 
 ✔ Controle de quantidade de produtos<br>
 ✔ Adição de produtos ao carrinho<br>
 ✔ Modal do carrinho interativo<br>
-✔ Feedback visual para ações do usuário<br>
 ✔ Design responsivo para diferentes tamanhos de tela<br>
 
-##💻 Tecnologias Utilizadas
+## 💻 Tecnologias Utilizadas
 
 <div style="display: inline_block"><br>
   <img align="center" alt="marlene-html" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
@@ -22,7 +21,7 @@ O sistema oferece uma interface intuitiva e responsiva, tornando a experiência 
   <img align="center" alt="marlene-javascript" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
 </div>
 
-##🎯 Como Usar
+## 🎯 Como Usar
 
 Clone o repositório
 git clone https://github.com/seu-usuario/ecommerce-product-page.git
@@ -37,7 +36,7 @@ git clone https://github.com/seu-usuario/ecommerce-product-page.git
 │── 📄 index.html       &nbsp; ==> Estrutura principal da página<br>
 │── 📄 README.md        &nbsp; ==> Documentação do projeto<br>
 
-##3🛠 Principais Recursos Implementados
+## 🛠 Principais Recursos Implementados
 
 1️⃣ Menu Mobile
 Um menu responsivo que se abre e fecha com animação.
