@@ -14,7 +14,7 @@ O sistema oferece uma interface intuitiva e responsiva, tornando a experiência 
 ✔ Feedback visual para ações do usuário<br>
 ✔ Design responsivo para diferentes tamanhos de tela<br>
 
-##💻 Tecnologias Utilizadas
+## 💻 Tecnologias Utilizadas
 
 <div style="display: inline_block"><br>
   <img align="center" alt="marlene-html" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
@@ -22,7 +22,7 @@ O sistema oferece uma interface intuitiva e responsiva, tornando a experiência 
   <img align="center" alt="marlene-javascript" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
 </div>
 
-##🎯 Como Usar
+## 🎯 Como Usar
 
 Clone o repositório
 git clone https://github.com/seu-usuario/ecommerce-product-page.git
