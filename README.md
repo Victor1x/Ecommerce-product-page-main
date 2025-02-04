@@ -63,14 +63,9 @@ Implementação de media queries para ajuste automático do conteúdo.
 
 ## 📸 Demonstração
 
-## 🖥️ Versão Desktop
+## 🖥️ Versão Desktop e Mobile
 <div align="center">
-<img src="assets/images/1-Macbook-Air-127.0.0.1.png" width="800px">
-</div>
-
-## 📱Versão Mobile
-<div align="center">
-<img src="assets/images/2-mobile-design.png" width="400px">
+<img src="assets/images/Demonstração.svg" width="800px">
 </div>
 
 ## 🏆 Créditos<br>
