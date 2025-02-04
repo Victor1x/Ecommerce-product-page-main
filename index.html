@@ -12,108 +12,115 @@
 
   <link rel="stylesheet" href="assets/style/style.css">
   <link rel="stylesheet" href="assets/style/responsiveness.css">
-  <!-- <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
 
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style> -->
 </head>
 
 <body>
-  <div class="modal-container-cart ">
-    <div class="modal ">
-
-    </div>
-    <!-- .active__modal__product -->
+  <!-- Modal do Carrinho -->
+  <div class="modal-container-cart" aria-live="polite">
+    <section class="modal modal_card_vazio">
+      <div class="text-cart">
+        <p>Cart</p>
+      </div>
+        <p class="text-fraco">Your cart is empty</p>
+      </div>
   </div>
+
+  <!-- Cabeçalho -->
   <header>
     <div class="container_main_center">
       <nav>
         <div class="navbar__container">
-          <div class="mobile__menu">
+          <!-- Menu Mobile -->
+          <button class="mobile__menu" aria-label="Abrir menu de navegação">
             <span class="line1"></span>
             <span class="line2"></span>
             <span class="line3"></span>
-          </div>
+          </button>
+
+          <!-- Logo -->
           <div class="logo__container hover_link">
-            <a href="#">
+            <a href="#" aria-label="Página inicial">
               <img src="assets/images/logo.svg" alt="Logo da empresa">
             </a>
           </div>
-          <ul class="nav__list">
-            <li class="nav__item">
-              <a href="#">Collections</a>
-            </li>
-            <li class="nav__item">
-              <a href="#">Men</a>
-            </li>
-            <li class="nav__item">
-              <a href="#">Women</a>
-            </li>
-            <li class="nav__item">
-              <a href="#">About</a>
-            </li>
-            <li class="nav__item">
-              <a href="#">Contact</a>
-            </li>
+
+          <!-- Lista de navegação -->
+          <ul class="nav__list" role="menu">
+            <li class="nav__item" role="menuitem"><a href="#">Collections</a></li>
+            <li class="nav__item" role="menuitem"><a href="#">Men</a></li>
+            <li class="nav__item" role="menuitem"><a href="#">Women</a></li>
+            <li class="nav__item" role="menuitem"><a href="#">About</a></li>
+            <li class="nav__item" role="menuitem"><a href="#">Contact</a></li>
           </ul>
         </div>
+
+        <!-- Carrinho e Perfil -->
         <div class="navbar__cart__profile__container">
           <div class="navbar__cart">
-            <a href="#" class="link__cart hover_link">
-              <img src="assets/images/icon-cart.svg" alt="cart de item">
-              <span class="cart__quantity">2</span>
+            <a href="#" class="link__cart hover_link" aria-label="Abrir carrinho">
+              <img src="assets/images/icon-cart.svg" alt="Carrinho de compras">
+              <span class="cart__quantity" aria-live="polite">0</span>
             </a>
           </div>
           <div class="navbar__profile">
-            <img src="assets/images/image-avatar.png" alt="profile usuario">
+            <img src="assets/images/image-avatar.png" alt="Perfil do usuário">
           </div>
         </div>
       </nav>
-      <div id="shadow">
 
-      </div>
+      <!-- Fundo escuro para fechamento do menu -->
+      <div id="shadow" aria-hidden="true"></div>
     </div>
   </header>
 
+  <!-- Conteúdo Principal -->
   <main>
     <div class="container_main_center">
-      <div class="container__product">
-        <div class="container__product__img">
-          <div class="div__img__bigger">
-            <div class="btn__setas__direita">
-              <img src="assets/images/icon-previous.svg" alt="">
-            </div>
-            <img src="assets/images/image-product-1.jpg"  class="img__main" alt="imagem do produto">
-            <div class="btn_setas__esquerda">
-              <img src="assets/images/icon-next.svg" alt="">
-            </div>
-          </div>
-          <div class="container__product__img__smaller">
-            <div class="img__smaller1 img__active"><img src="assets/images/image-product-1-thumbnail.jpg" alt=""></div>
-            <div class="img__smaller2 img__active"><img src="assets/images/image-product-2-thumbnail.jpg" alt=""></div>
-            <div class="img__smaller3 img__active"><img src="assets/images/image-product-3-thumbnail.jpg" alt=""></div>
-            <div class="img__smaller4 img__active"><img src="assets/images/image-product-4-thumbnail.jpg" alt=""></div>
-          </div>
-        </div>
+      <section class="container__product">
 
-        <div class="container__product__info">
-          <div class="container__product__info__text">
-            <h4 class="container__product__info__text__company">Sneaker Company
-              <h4 />
-              <h1 class="container__product__info__text__title">Fall Limited Edition Sneakers</h1>
-              <p class="container__product__info__text__description">
-                These low-profile sneakers are your perfect casual
-                wear companion. Featuring a durable rubber outer sole,
-                they’ll withstand everything the weather can offer.
-              </p>
+        <!-- Imagens do produto -->
+        <section class="container__product__img">
+          <figure class="div__img__bigger">
+            <button class="btn__setas__direita" aria-label="Imagem anterior">
+              <img src="assets/images/icon-previous.svg" alt="">
+            </button>
+            <img src="assets/images/image-product-1.jpg" class="img__main" alt="Imagem do produto">
+            <button class="btn_setas__esquerda" aria-label="Próxima imagem">
+              <img src="assets/images/icon-next.svg" alt="">
+            </button>
+          </figure>
+
+          <div class="container__product__img__smaller">
+            <figure class="img__smaller1 img__active">
+              <img src="assets/images/image-product-1-thumbnail.jpg" alt="Miniatura 1 do produto">
+            </figure>
+            <figure class="img__smaller2 img__active">
+              <img src="assets/images/image-product-2-thumbnail.jpg" alt="Miniatura 2 do produto">
+            </figure>
+            <figure class="img__smaller3 img__active">
+              <img src="assets/images/image-product-3-thumbnail.jpg" alt="Miniatura 3 do produto">
+            </figure>
+            <figure class="img__smaller4 img__active">
+              <img src="assets/images/image-product-4-thumbnail.jpg" alt="Miniatura 4 do produto">
+            </figure>
           </div>
-          <div class="container__product__info__price">
+        </section>
+
+        <!-- Informações do Produto -->
+        <section class="container__product__info">
+          <article class="container__product__info__text">
+            <h4 class="container__product__info__text__company">Sneaker Company</h4>
+            <h1 class="container__product__info__text__title">Fall Limited Edition Sneakers</h1>
+            <p class="container__product__info__text__description">
+              These low-profile sneakers are your perfect casual
+              wear companion. Featuring a durable rubber outer sole,
+              they’ll withstand everything the weather can offer.
+            </p>
+          </article>
+
+          <!-- Preço -->
+          <section class="container__product__info__price">
             <div class="container__product__info__price__current">
               <p class="container__product__info__price__current__value">$125.00</p>
               <p class="container__product__info__price__current__discount">50%</p>
@@ -121,40 +128,30 @@
             <div class="container__product__info__price__previous">
               <p class="container__product__info__price__previous__value">$250.00</p>
             </div>
-          </div>
-          <div class="container__product__info__quantity">
-            <div class="container__product__info__quantity__control">
-              <button class="container__product__info__quantity__control__btn">-</button>
-              <p class="container__product__info__quantity__control__value">0</p>
-              <button class="container__product__info__quantity__control__btn">+</button>
-            </div>
-            <button class="container__product__info__quantity__btn"><img src="assets/images/icon-cart-black.svg"
-                alt="cart de item"> Add to cart</button>
-          </div>
+          </section>
 
-        </div>
-      </div>
+          <!-- Controle de quantidade -->
+          <section class="container__product__info__quantity">
+            <div class="container__product__info__quantity__control">
+              <button id="btn__menos" class="container__product__info__quantity__control__btn"
+                aria-label="Diminuir quantidade">-</button>
+              <p class="container__product__info__quantity__control__value" aria-live="polite">0</p>
+              <button id="btn__mais" class="container__product__info__quantity__control__btn"
+                aria-label="Aumentar quantidade">+</button>
+            </div>
+
+            <!-- Botão de adicionar ao carrinho -->
+            <button id="btn__add__cart" class="container__product__info__quantity__btn">
+              <img src="assets/images/icon-cart-black.svg" alt="Ícone do carrinho">
+              Add to cart
+            </button>
+          </section>
+        </section>
+
+      </section>
     </div>
   </main>
 
-  <!-- Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
 </body>
 <script src="assets/script/script.js"></script>
 <script src="assets/script/menu.js"></script>

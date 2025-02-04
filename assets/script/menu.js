@@ -1,70 +1,65 @@
+// Seleciona os elementos do DOM
 const body = document.querySelector("body");
-const mobile__menu = document.querySelector(".mobile__menu");
-const nav__list = document.querySelector(".nav__list");
+const mobileMenu = document.querySelector(".mobile__menu");
+const navList = document.querySelector(".nav__list");
 const shadow = document.querySelector("#shadow");
-const nav__item = document.querySelectorAll(".nav__item");
+const navItems = document.querySelectorAll(".nav__item");
 
-  function animateLinks() {
-    nav__item.forEach((link, index) => {
-      if (link.style.animation) {
-        link.style.animation = "";
-      } else {
-        link.style.animation = `nav__itemFade 0.5s ease forwards ${
-          index / 7 + 0.3
-        }s`;
-      }
-    });
-  }
+// Função para animar os links do menu ao abrir/fechar
+function animateLinks() {
+  navItems.forEach((link, index) => {
+    link.style.animation = mobileMenu.classList.contains("active")
+      ? `nav__itemFade 0.5s ease forwards ${index / 7 + 0.3}s`
+      : "";
+  });
+}
 
-  function Active(mobile__menu, nav__list) {
-    mobile__menu.addEventListener("click", (event) => {
-        event.stopPropagation(); // Impede o clique de se propagar para o documento
-        mobile__menu.classList.toggle("active");
-        nav__list.classList.toggle("active");
-        animateLinks()
+// Função para abrir e fechar o menu mobile
+function toggleMenu() {
+  const isActive = mobileMenu.classList.toggle("active");//muito bom 
+  navList.classList.toggle("active");
+  animateLinks();
 
-        if (mobile__menu.classList.contains('active')) {
-            shadow.style.display = 'flex';
-            body.style.overflowY = 'hidden';
-        } else {
-            shadow.style.display = 'none';
-            body.style.overflowY = 'scroll';
-        }
-    });
+  // Controla a exibição do fundo escuro e o scroll da página
+  shadow.style.display = isActive ? "flex" : "none";
+  body.style.overflowY = isActive ? "hidden" : "scroll";
+
+  // Acessibilidade: Define se o menu está expandido ou não
+  mobileMenu.setAttribute("aria-expanded", isActive);
 }
 
 // Função para fechar o menu
 function closeMenu() {
-    if (mobile__menu.classList.contains('active')) {
-        mobile__menu.classList.remove("active");
-        nav__list.classList.remove("active");
-        shadow.style.display = 'none';
-        body.style.overflowY = 'scroll';
-    }
+  if (mobileMenu.classList.contains("active")) {
+    mobileMenu.classList.remove("active");
+    navList.classList.remove("active");
+    shadow.style.display = "none";
+    body.style.overflowY = "scroll";
+    animateLinks();
+    mobileMenu.setAttribute("aria-expanded", "false");
+  }
 }
 
-// Evento para fechar o menu ao clicar fora dele
-shadow.addEventListener("click", (event) => {
-    if (!nav__list.contains(event.target) && !mobile__menu.contains(event.target)) {
-        closeMenu();
-    }
-});
+// Evento para abrir/fechar o menu ao clicar no ícone do menu mobile
+mobileMenu.addEventListener("click", toggleMenu);
 
-
-
-window.addEventListener('resize', () => { // Adicione um ouvinte de evento de redimensionamento   
-  // ==>resize<==
-  //Ajustes dinâmicos para layout responsivo ou elementos que dependem do tamanho da janela
-  //Quando a janela do navegador é redimensionada
-  if (window.innerWidth > 850) {
-    shadow.style.display = 'none'; // Altere para 'none', 'inline', etc., se necessário
-  } 
-});
-
-// Evento para fechar o menu ao clicar no fundo escuro (shadow)
+// Evento para fechar o menu ao clicar fora dele (no fundo escuro)
 shadow.addEventListener("click", closeMenu);
-// Inicializa a funcionalidade do menu
-Active(mobile__menu, nav__list);
+
+// Fecha o menu ao pressionar a tecla "Esc"
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeMenu();
+  }
+});
+
+// Evento para esconder o fundo escuro ao redimensionar a tela
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 850) {
+    closeMenu(); // Fecha o menu se a tela for maior
+  }
+});
+
 
 
 

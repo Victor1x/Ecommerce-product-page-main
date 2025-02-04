@@ -19,18 +19,10 @@
   --orange: hsl(26, 100%, 55%);
   --pale-orange: hsl(25, 100%, 94%);
 }
-/* 
-* ### Neutral
-- Very dark blue: hsl(220, 13%, 13%)
-- Dark grayish blue: hsl(219, 9%, 45%)
-- Grayish blue: hsl(220, 14%, 75%)
-- Light grayish blue: hsl(223, 64%, 98%)
-- White: hsl(0, 0%, 100%)
-- Black (with 75% opacity for lightbox background): hsl(0, 0%,0%) */
 
 body {
   width: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 174px);
   background-color: var(--light-grayish-blue);
   font-family: var(--font-family);
   overflow-x: hidden;
@@ -38,25 +30,18 @@ body {
 a {
   cursor: pointer;
 }
-/* Estilo da barra de rolagem */
 ::-webkit-scrollbar {
   width: 10px; /* Largura da barra de rolagem */
   height: 10px; /* Altura da barra de rolagem (horizontal) */
 }
-
-/* Fundo da barra de rolagem */
 ::-webkit-scrollbar-track {
   background: #f0f0f0; /* Cor do fundo da barra */
   border-radius: 5px;
 }
-
-/* Thumb (o "botão" que desliza) */
 ::-webkit-scrollbar-thumb {
   background: #888; /* Cor do botão */
   border-radius: 5px;
 }
-
-/* Thumb ao passar o mouse */
 ::-webkit-scrollbar-thumb:hover {
   background: #555; /* Cor do botão ao passar o mouse */
 }

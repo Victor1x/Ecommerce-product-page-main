@@ -1,98 +1,96 @@
-const btn__setas__direita = document.querySelector(".btn__setas__direita");
-const btn_setas__esquerda = document.querySelector(".btn_setas__esquerda");
+// Seleciona os elementos do DOM
+const modal_container = document.querySelector(".modal-container-cart");
 
-const img__main = document.querySelector(".img__main");
-const img__smaller2 = document.querySelector(".img__smaller2");
-const img__smaller3 = document.querySelector(".img__smaller3");
-const img__smaller4 = document.querySelector(".img__smaller4");
-const img__active = document.querySelectorAll(".img__active");
+// Botões de navegação das imagens
+const btnSetasDireita = document.querySelector(".btn__setas__direita");
+const btnSetasEsquerda = document.querySelector(".btn_setas__esquerda");
 
-let isFixed = false; // Variável para controlar se a imagem está fixada
+// Imagens principais e miniaturas
+const imgMain = document.querySelector(".img__main");
+const imgActive = document.querySelectorAll(".img__active");
+
+// Botões e elementos do carrinho
+const btnAddCart = document.getElementById("btn__add__cart");
+const btnMenos = document.getElementById("btn__menos");
+const btnMais = document.getElementById("btn__mais");
+let quantity = document.querySelector(
+  ".container__product__info__quantity__control__value"
+);
+let cart__quantity = document.querySelector(".cart__quantity");
+
+// Variável para controlar o índice da imagem exibida
 let index = 0;
-const caminho = [
+
+// Caminho das imagens do produto
+const imagens = [
   "assets/images/image-product-1.jpg",
   "assets/images/image-product-2.jpg",
   "assets/images/image-product-3.jpg",
   "assets/images/image-product-4.jpg",
 ];
 
-img__active.forEach((img, index) => {
-  // Evento de mouseover
+// Função para alterar a imagem principal ao passar o mouse sobre as miniaturas
+imgActive.forEach((img, i) => {
   img.addEventListener("mouseover", () => {
-    // Somente se a imagem não estiver fixada
-    img__main.classList.add("hidden"); // Inicia a transição
+    imgMain.classList.add("hidden"); // Adiciona a classe para efeito de transição
     setTimeout(() => {
-      img__main.src = caminho[index]; // Muda para a imagem correspondente
-      img__main.classList.remove("hidden"); // Reexibe suavemente
+      imgMain.src = imagens[i]; // Atualiza a imagem principal
+      imgMain.classList.remove("hidden"); // Remove a classe para exibir suavemente
     }, 400); // Tempo da transição
   });
 });
-btn_setas__esquerda.addEventListener("click", () => {
-  if (index < caminho.length - 1) {
-    btn__setas__direita.classList.remove("disabled");
 
-    index++; // Incrementa o index para mudar para a próxima imagem
-    img__main.classList.add("hidden"); // Inicia a transição
-    setTimeout(() => {
-      img__main.src = caminho[index]; // Muda para a imagem correspondente
-      img__main.classList.remove("hidden"); // Reexibe suavemente
-    }, 400); // Tempo da transição
-  }
-  else{
-    btn_setas__esquerda.classList.add("disabled");
+// Função para navegar pelas imagens ao clicar na seta esquerda
+btnSetasEsquerda.addEventListener("click", () => {
+  if (index < imagens.length - 1) {
+    btnSetasDireita.classList.remove("disabled"); // Habilita seta direita
+
+    index++; // Incrementa o índice da imagem
+    atualizarImagem();
+  } else {
+    btnSetasEsquerda.classList.add("disabled"); // Desativa seta esquerda se for a última imagem
   }
 });
 
-btn__setas__direita.addEventListener("click", () => {
+// Função para navegar pelas imagens ao clicar na seta direita
+btnSetasDireita.addEventListener("click", () => {
   if (index > 0) {
-    btn_setas__esquerda.classList.remove("disabled");
+    btnSetasEsquerda.classList.remove("disabled"); // Habilita seta esquerda
 
-    index--; // Decrementa o index para mudar para a imagem anterior
-
-    img__main.classList.add("hidden"); // Inicia a transição
-    setTimeout(() => {
-      img__main.src = caminho[index]; // Muda para a imagem correspondente
-      img__main.classList.remove("hidden"); // Reexibe suavemente
-    }, 400); // Tempo da transição
-  }
-  else{
-    btn__setas__direita.classList.add("disabled");
+    index--; // Decrementa o índice da imagem
+    atualizarImagem();
+  } else {
+    btnSetasDireita.classList.add("disabled"); // Desativa seta direita se for a primeira imagem
   }
 });
 
-//   // Evento de mouseout
-//   img.addEventListener("mouseout", () => {
-//     if (!isFixed) {
-//       // Somente se a imagem não estiver fixada
-//       img__main.classList.add("hidden"); // Inicia a transição
-//       setTimeout(() => {
-//         img__main.src = caminho[0]; // Volta à imagem inicial
-//         img__main.classList.remove("hidden"); // Reexibe suavemente
-//       }, 400);
-//     }
-//   });
+// Função para atualizar a imagem principal com transição
+function atualizarImagem() {
+  imgMain.classList.add("hidden"); // Adiciona efeito de transição
+  setTimeout(() => {
+    imgMain.src = imagens[index]; // Atualiza a imagem
+    imgMain.classList.remove("hidden"); // Remove efeito de transição
+  }, 400); // Tempo da transição
+}
 
-//   // Evento de clique
-//   img.addEventListener("click", () => {
-//     isFixed = true; // Define a imagem como fixada
-//     img__main.classList.add("hidden"); // Inicia a transição
-//     setTimeout(() => {
-//       img__main.src = caminho[index + 1]; // Muda para a imagem correspondente
-//       img__main.classList.remove("hidden"); // Reexibe suavemente
-//     }, 400);
-//   });
+// Evento para diminuir a quantidade do produto
+btnMenos.addEventListener("click", () => {
+  if (quantity.textContent > 0) {
+    quantity.textContent--;
+  }
+});
 
-// });
+// Evento para aumentar a quantidade do produto
+btnMais.addEventListener("click", () => {
+  quantity.textContent++;
+});
 
-// // Verificação de clique fora do contêiner
-// document.addEventListener("click", (e) => {
-//   // Verifica se o clique foi fora do contêiner
-//   if (!container__product__img.contains(e.target)) {
-//     isFixed = false; // Reseta o estado fixado
-//     img__main.classList.add("hidden"); // Inicia a transição
-//     setTimeout(() => {
-//       img__main.src = caminho[0]; // Volta à imagem inicial
-//       img__main.classList.remove("hidden"); // Reexibe suavemente
-//     }, 400);
-//   }
-// });
+// Evento para adicionar ao carrinho e abrir o modal
+btnAddCart.addEventListener("click", () => {
+  if (Number(quantity.textContent) === 0) {
+    return;
+  } else {
+    modal_container.innerHTML = ""; // Limpa o modal antes de adicionar novos elementos
+    create_modal_elements(); // Função que cria os elementos do modal do carrinho
+  }
+});

@@ -15,31 +15,10 @@
   display: none;
   z-index: 200;
 }
-/* .nav__list {
-  width: 30%; 
-  height: 100vh;
-  position: fixed;
-  left: -50%;
-  top: 82px;
-  background-color: #ffff;
-  backdrop-filter: blur(2px);
-  z-index: 300;
-  transition: 1s;
-  display: flex;
-  list-style: none;
-  flex-direction: column;
-  align-items: center;
-}
-
-.nav__list.active {
-  left: 0;
-} */
-
 .mobile__menu {
   display: none;
   cursor: pointer;
   flex-direction: column;
-  /* border: 2px solid #000; */
 }
 
 .mobile__menu span {

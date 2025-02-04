@@ -1,5 +1,10 @@
 header {
   width: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background-color: #F7F8FD;
 }
 
 .container_main_center {
@@ -12,27 +17,26 @@ nav {
   align-items: start;
   border-bottom: 1px solid var(--grayish-blue);
   padding: 40px 0px 0px;
-
 }
-
+main {
+  margin-top:   72px;
+}
 .navbar__container {
   display: flex;
   align-items: center;
-  /* padding: 40px 0px 0px; */
   gap: 60px;
 }
-.logo__container{
+.logo__container {
   display: flex;
   align-self: start;
   object-fit: cover;
-  /* padding-top: 5px; */
 }
 .nav__list {
   display: flex;
   list-style: none;
   gap: 30px;
 }
-.nav__item{
+.nav__item {
   height: 60px;
   display: flex;
 }
@@ -60,7 +64,6 @@ nav {
   display: flex;
   position: relative;
   align-self: center;
-  /* justify-content: center; */
   cursor: pointer;
 }
 

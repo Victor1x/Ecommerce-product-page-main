@@ -70,7 +70,7 @@
 
   .nav__list {
     width: 30%; /* motificacao importatde para 35%   */
-    height: calc(100vh - 82px);
+    min-height: calc(100vh - 82px);
     position: fixed;
     left: -60%;
     top: 82px;
@@ -122,7 +122,10 @@
   }
 
   .modal {
-    margin: 80px 20px;
+    margin: 10px 20px;
+  }
+  .container__product__info{
+    width: 43%;
   }
 }
 
@@ -197,7 +200,6 @@
     justify-content: space-between;
   }
   .container__product__info__price {
-    flex-direction: row;
     justify-content: space-between;
   }
   .container__product__info__quantity__btn {
@@ -228,7 +230,7 @@
     min-height: 100px;
     display: flex;
     flex: 1 1 350px;
-    margin: 80px 10px;
+    margin: 10px;
   }
 
   .navbar__cart {
@@ -239,5 +241,8 @@
   .btn_setas__esquerda {
     width: 35px;
     height: 35px;
+  }
+  nav{
+    padding: 20px 5px;
   }
 }
