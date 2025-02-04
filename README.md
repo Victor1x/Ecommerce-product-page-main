@@ -11,7 +11,6 @@ O sistema oferece uma interface intuitiva e responsiva, tornando a experiência 
 ✔ Controle de quantidade de produtos<br>
 ✔ Adição de produtos ao carrinho<br>
 ✔ Modal do carrinho interativo<br>
-✔ Feedback visual para ações do usuário<br>
 ✔ Design responsivo para diferentes tamanhos de tela<br>
 
 ## 💻 Tecnologias Utilizadas
@@ -37,7 +36,7 @@ git clone https://github.com/seu-usuario/ecommerce-product-page.git
 │── 📄 index.html       &nbsp; ==> Estrutura principal da página<br>
 │── 📄 README.md        &nbsp; ==> Documentação do projeto<br>
 
-##3🛠 Principais Recursos Implementados
+## 3🛠 Principais Recursos Implementados
 
 1️⃣ Menu Mobile
 Um menu responsivo que se abre e fecha com animação.
